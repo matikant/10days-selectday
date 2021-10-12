@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Calendar 04</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/index.css">
+	<title>select available day</title>
+
+	</head>
+	<body>
+    <div class="leftbg">
+        <div class="onleftbg">
+            <h3>Please select<br>your day.</h3>
+            <br>
+            <button class="choice" id="green"><i class="fa fa-check-circle fa-lg" style="color:#81B725"></i> Yeah! I am available</button><br>
+            <button class="choice" id="yellow"><i class="fa fa-minus-circle fa-lg" style="color:#F4C253"></i> Nah, not really</button><br>
+            <button class="choice" id="red"><i class="fa fa-times-circle fa-lg" style="color:#E2410A"></i> Really busy</button><br>
+            <br>
+            <button class="done">done</button>
+        </div>
+    </div>
+
+    <div class="rightbg">
+        <div class="circle" id="one"></div>
+        <div class="circle" id="two"></div>
+        <div class="circle" id="three"></div>
+        <div class="centered">
+        <div class="toptool">
+            <div class="grouptoptool"><div><img src="http://hillrag.com/wp-content/uploads/2017/11/rabbit-pic.jpg" alt="Avatar man"></img></div>
+            <div><h3 id="username">username's<br>calendar</h3></div></div>
+            <div></div>
+            <div class="grouptoptool"><div><button class="rightfx" id="noti"><i class="fa fa-bell fa-lg" style="color:#fff"></i></button></div>
+            <div><button class="rightfx"><i class="fa fa-plus-circle fa-lg" style="color:#fff"></i></button></div></div>
+        </div>
+        <div class="calendarpadding">
+        <div class="calendar">
+            <div class="year-header"> 
+                <span class="left-button fa fa-chevron-left" id="prev"> </span> 
+                <span class="year" id="label"></span> 
+                <span class="right-button fa fa-chevron-right" id="next"> </span>
+              </div> 
+              <table class="months-table w-100"> 
+                <tbody>
+                  <tr class="months-row">
+                    <td class="month">Jan</td> 
+                    <td class="month">Feb</td> 
+                    <td class="month">Mar</td> 
+                    <td class="month">Apr</td> 
+                    <td class="month">May</td> 
+                    <td class="month">Jun</td> 
+                    <td class="month">Jul</td>
+                    <td class="month">Aug</td> 
+                    <td class="month">Sep</td> 
+                    <td class="month">Oct</td>          
+                    <td class="month">Nov</td>
+                    <td class="month">Dec</td>
+                  </tr>
+                </tbody>
+              </table> 
+              
+              <table class="days-table w-100"> 
+                <td class="day">Sun</td> 
+                <td class="day">Mon</td> 
+                <td class="day">Tue</td> 
+                <td class="day">Wed</td> 
+                <td class="day">Thu</td> 
+                <td class="day">Fri</td> 
+                <td class="day">Sat</td>
+              </table> 
+              <div class="frame"> 
+                <table class="dates-table w-100"> 
+                <tbody class="tbody">             
+                </tbody> 
+                </table>
+              </div> 
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>  
+    <script src="js/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+	</body>
+</html>

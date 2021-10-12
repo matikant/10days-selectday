@@ -1,5 +1,5 @@
-*{
-  font-family: 'Poppins', sans-serif;
+* {
+  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
   font-size: 1rem;
   padding-left: 0;
@@ -7,13 +7,14 @@
 
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .w-100 {
-  width: 100% !important; }
+  width: 100% !important;
+}
 
 .leftbg {
   height: 100%;
@@ -25,67 +26,14 @@ body {
   background-color: white;
 }
 
-.rightbg {
-  height: 100%;
-  width: 75%;
-  position: fixed;
-  overflow-x: hidden;
-  right: 0;
-  background-color: #F4C253;
-}
-
 .onleftbg {
   position: absolute;
-  top: 25%;
+  top: 50%;
+  transform: translate(0, -50%);
   left: 12%;
   width: 100%;
   text-align: left;
   padding-left: 3%;
-}
-
-.toptool {
-  text-align: left;
-  padding-left: 3%;
-  margin-right: 0.5%;
-  display: flex;
-  justify-content: space-between;
-}
-
-#username {
-  margin-top: 15%;
-}
-
-.toptool img {
-  width: 6rem;
-  height: 6rem;
-  border-radius: 50%;
-  margin-right: 2rem;
-  .toptool img: noticircle{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #515853; }
-}
-
-.rightfx {
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
-  padding: 4.5rem 1rem 0rem 0rem;
-}
-
-.grouptoptool {
-  display: flex;
-}
-
-.centered {
-  position: absolute;
-  top: 5%;
-  text-align: center;
-  width: 100%;
 }
 
 .choice {
@@ -102,7 +50,7 @@ body {
 .done {
   cursor: pointer;
   border: none;
-  background-color: #2D4863;
+  background-color: #2d4863;
   width: 70%;
   height: 2.5rem;
   border-radius: 1rem;
@@ -112,42 +60,90 @@ body {
   font-size: 0.9rem;
 }
 
-#one{
+.rightbg {
+  height: 100%;
+  width: 75%;
+  position: fixed;
+  overflow-x: hidden;
+  right: 0;
+  background-color: #f4c253;
+}
+
+#one {
   width: 20rem;
   height: 20rem;
-  background-color: #81B725;
+  background-color: #81b725;
   position: fixed;
   right: 0;
-  top:0 ;
+  top: 0;
   filter: blur(9rem);
   opacity: 60%;
 }
 
-#two{
+#two {
   width: 40rem;
   height: 40rem;
-  background-color: #81B725;
+  background-color: #81b725;
   position: fixed;
   left: 0;
-  bottom:0 ;
+  bottom: 0;
   filter: blur(9rem);
   opacity: 60%;
 }
 
-#three{
+#three {
   width: 15rem;
   height: 15rem;
-  background-color: #E2410A;
+  background-color: #e2410a;
   position: fixed;
   right: 0;
-  bottom:0 ;
+  bottom: 0;
   filter: blur(8rem);
   opacity: 70%;
 }
 
-.calendar {
-  display: 'block';
-  z-index: 2;
+.onrightbg {
+  height: 100%;
+  position: relative;
+}
+
+.centered {
+  position: relative;
+  top: 50%;
+  text-align: center;
+  transform: translate(0, -50%);
+  width: 100%;
+}
+
+.toptool {
+  text-align: left;
+  padding-left: 3%;
+  margin-right: 0.5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.toptool img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: 0.1rem solid #fff;
+  margin-right: 2rem;
+}
+
+#username {
+  margin-top: 15%;
+}
+
+.grouptoptool {
+  display: flex;
+}
+
+.rightfx {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  padding: 4.5rem 1rem 0rem 0rem;
 }
 
 .calendarpadding {
@@ -159,22 +155,28 @@ body {
   z-index: 1;
 }
 
+.calendar {
+  display: "block";
+  z-index: 2;
+}
+
 .year-header {
   background: #fff;
-  height: 2rem;
   text-align: center;
   position: relative;
   color: #fff;
   border-top-left-radius: 0.3rem;
-  margin-top: 1rem; }
+  margin-top: 1rem;
+}
 
 .year-header span {
   display: inline-block;
   font-size: 1.5rem;
-  line-height: 2rem;
-  color: #000; }
+  color: #000;
+}
 
-.left-button, .right-button {
+.left-button,
+.right-button {
   cursor: pointer;
   width: 2rem;
   text-align: center;
@@ -183,30 +185,42 @@ body {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  font-size: 1rem !important; }
-  @media (prefers-reduced-motion: reduce) {
-    .left-button, .right-button {
-      -webkit-transition: none;
-      -o-transition: none;
-      transition: none; } }
-  .left-button:hover, .right-button:hover {
-    color: #F4C253 !important; }
+  font-size: 1rem !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .left-button,
+  .right-button {
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+}
+.left-button:hover,
+.right-button:hover {
+  color: #2d4863 !important;
+}
 
 .left-button {
-  left: 0; }
+  left: 0;
+}
 
 .right-button {
   right: 0;
-  top: 0; }
+  top: 0;
+}
 
 label {
   display: inline-block;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.5rem;
+}
 
-.days-table, .dates-table, .months-table {
+.days-table,
+.dates-table,
+.months-table {
   border-collapse: separate;
   text-align: center;
-  table-layout: fixed; }
+  table-layout: fixed;
+}
 
 .day {
   height: 1.25rem;
@@ -216,7 +230,8 @@ label {
   text-align: center;
   border-radius: 0.4rem;
   text-transform: uppercase;
-  color: #000; }
+  color: #000;
+}
 
 .month {
   cursor: pointer;
@@ -229,60 +244,65 @@ label {
   color: #cccccc;
   -webkit-transition: all 250ms;
   -o-transition: all 250ms;
-  transition: all 250ms; }
+  transition: all 250ms;
+}
 
 .active-month {
   font-weight: 700;
-  color: #000; }
+  color: #000;
+}
 
 .month:hover {
-  color: #F4C253; }
+  color: #2d4863;
+}
 
 .table-date {
   cursor: pointer;
   color: #2b2b2b;
-  height: 1.25rem;
-  width: 1.25rem;
   font-size: 1rem;
   padding: 0.6rem;
+  height: 7vh;
   text-align: center;
   border-radius: 0.4rem;
   -webkit-transition: all 250ms;
   -o-transition: all 250ms;
   transition: all 250ms;
-  position: relative; 
+  position: relative;
 }
 
 .table-date:not(.nil):hover {
-  border-color: #F4C253; }
+  border-color: #f4c253;
+}
 
 .event-date-green {
-  background: #81B725;
-  color: #fff; }
+  background: #81b725;
+  color: #fff;
+}
 
 .event-date-yellow {
-  background: #F4C253;
-  color: #fff; }
+  background: #f4c253;
+  color: #fff;
+}
 
 .event-date-red {
-  background: #E2410A;
-  color: #fff; }
-
-.active-date {
-  background: rgba(128, 128, 128, 0.7);
-  color: #fff; }
+  background: #e2410a;
+  color: #fff;
+}
 
 .event-date-green.active-date {
   background: #6ba100;
-  color: #fff; }
+  color: #fff;
+}
 
 .event-date-yellow.active-date {
   background: #e6b546;
-  color: #fff; }
+  color: #fff;
+}
 
 .event-date-red.active-date {
   background: #c42300;
-  color: #fff; }
+  color: #fff;
+}
 
 h3 {
   text-align: left;

@@ -1,10 +1,6 @@
-(function($) {
-
-	"use strict";
-
-let cntg = true;
-let cnty = true;
-let cntr = true;
+var cntg = true;
+var cnty = true;
+var cntr = true;
 $(".done").prop("disabled", true);
 $(document).ready(function(){
     $("#green").click(function(){
@@ -159,36 +155,35 @@ function new_event(event) {
     if($(".active-date").length===0)
         return;
     // Event handler for done button
-    $(".done").click({date: event.data.date}, function() {
-        var date = event.data.date;
-        var day = parseInt($(".active-date").html());
-        var month = date.getMonth();
-        var year = date.getFullYear();
-        var state = 0;
-        if (!cntg) {
-            state = 1;
-        }
-        if (!cnty) {
-            state = 2;
-        }
-        if (!cntr) {
-            state = 3;
-        }
-        var events = check_events(day, month+1, year);
-        if (events.length===0) {
-            new_event_json(date, day, state);
-        }
-        else if (state) {
-            update_event_json(day, month+1, year, state);
-        }
-        date.setDate(day);
-        init_calendar(date);
-        $("#green").prop("disabled", false);
-        $("#yellow").prop("disabled", false);
-        $("#red").prop("disabled", false);
-        $(".done").prop("disabled", true);
-        cntg = cnty = cntr = true;
-    });
+    var date = event.data.date;
+    var day = parseInt($(".active-date").html());
+    var month = date.getMonth();
+    var year = date.getFullYear();
+    var state = 0;
+    if (!cntg) {
+        state = 1;
+    }
+    if (!cnty) {
+        state = 2;
+    }
+    if (!cntr) {
+        state = 3;
+    }
+    var events = check_events(day, month+1, year);
+    if (events.length===0) {
+        new_event_json(date, day, state);
+    }
+    else if (state) {
+        update_event_json(day, month+1, year, state);
+    }
+    new_event_json(date, day, state);
+    date.setDate(day);
+    init_calendar(date);
+    $("#green").prop("disabled", false);
+    $("#yellow").prop("disabled", false);
+    $("#red").prop("disabled", false);
+    $(".done").prop("disabled", true);
+    cntg = cnty = cntr = true;
 }
 
 // Adds a json event to event_data
@@ -202,6 +197,7 @@ function new_event_json(date, day, state) {
     event_data["events"].push(event);
 }
 
+// Updates state of existing json event
 function update_event_json(day, month, year, state) {
     for(var i=0; i<event_data["events"].length; i++) {
         var event = event_data["events"][i];
@@ -247,5 +243,3 @@ const months = [
     "November", 
     "December" 
 ];
-
-})(jQuery);

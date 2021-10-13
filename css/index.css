@@ -2,6 +2,7 @@
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
   font-size: 1rem;
+  color: #333333;
   padding-left: 0;
 }
 
@@ -137,6 +138,15 @@ body {
 
 .grouptoptool {
   display: flex;
+}
+
+#logout {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 4.2rem;
+  left: 18rem;
 }
 
 .rightfx {

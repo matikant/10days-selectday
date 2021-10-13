@@ -3,11 +3,14 @@
   box-sizing: border-box;
   font-size: 1rem;
   color: #333333;
-  padding-left: 0;
 }
 
 body {
-  margin: 0;
+  padding: 0rem;
+  margin: 0rem;
+  width: 100%;
+  height: 100%;
+  position: relative;
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -23,12 +26,13 @@ body {
   position: fixed;
   z-index: 1;
   overflow-x: hidden;
+  overflow-y: auto;
   left: 0;
-  background-color: white;
+  background-color: #fff;
 }
 
 .onleftbg {
-  position: absolute;
+  position: relative;
   top: 50%;
   transform: translate(0, -50%);
   left: 12%;
@@ -42,10 +46,14 @@ body {
   border: none;
   border-radius: 1rem;
   text-align: left;
-  background-color: white;
+  background-color: #fff;
   transition-duration: 0.2s;
   padding: 0.4rem 0rem 0.4rem 0rem;
   font-size: 1.05rem;
+}
+
+.choice:disabled{
+  opacity: 0.65;
 }
 
 .done {
@@ -55,7 +63,7 @@ body {
   width: 70%;
   height: 2.5rem;
   border-radius: 1rem;
-  color: white;
+  color: #fff;
   text-align: center;
   transition-duration: 0.2s;
   font-size: 0.9rem;
@@ -65,7 +73,7 @@ body {
   height: 100%;
   width: 75%;
   position: fixed;
-  overflow-x: hidden;
+  overflow-y: auto;
   right: 0;
   background-color: #f4c253;
 }
@@ -132,12 +140,12 @@ body {
   margin-right: 2rem;
 }
 
-#username {
-  margin-top: 15%;
+.grouptoptool {
+  display: inline-flex;
 }
 
-.grouptoptool {
-  display: flex;
+#username {
+  margin-top: 15%;
 }
 
 #logout {
@@ -145,8 +153,8 @@ body {
   border: none;
   background-color: transparent;
   position: absolute;
-  top: 4.2rem;
-  left: 18rem;
+  margin-top: 4.2rem;
+  padding-left: 8.2rem;
 }
 
 .rightfx {
@@ -157,7 +165,7 @@ body {
 }
 
 .calendarpadding {
-  background-color: white;
+  background-color: #fff;
   border-radius: 1rem;
   padding: 0.3rem;
   margin: 1rem 1rem 0rem 1rem;
@@ -182,7 +190,7 @@ body {
 .year-header span {
   display: inline-block;
   font-size: 1.5rem;
-  color: #000;
+  color: #333333;
 }
 
 .left-button,
@@ -240,7 +248,7 @@ label {
   text-align: center;
   border-radius: 0.4rem;
   text-transform: uppercase;
-  color: #000;
+  color: #333333;
 }
 
 .month {
@@ -259,7 +267,7 @@ label {
 
 .active-month {
   font-weight: 700;
-  color: #000;
+  color: #333333;
 }
 
 .month:hover {

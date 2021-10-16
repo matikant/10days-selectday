@@ -55,16 +55,21 @@ function init_calendar(date) {
     // Set date to 1 to find the first day of the month
     date.setDate(1);
     var first_day = date.getDay();
+    var notfirstweek = false;
     // 35+firstDay is the number of date elements to be added to the dates table
     // 35 is from (7 days in a week) * (up to 5 rows of dates in a month)
-    for(var i=0; i<35+first_day; i++) {
+    for(var i=0; i<42+first_day; i++) {
         // Since some of the elements will be blank, 
         // need to calculate actual date from index
         var day = i-first_day+1;
         // If it is a sunday, make a new row
         if(i%7===0) {
+            if (notfirstweek && (day > day_count)) {
+                break;
+            }
             calendar_days.append(row);
             row = $("<tr class='table-row'></tr>");
+            notfirstweek = true;
         }
         // if current index isn't a day in this month, make it blank
         if(i < first_day || day > day_count) {

@@ -1,7 +1,7 @@
 * {
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
-  font-size: 1rem;
+  font-size: 16px;
   color: #333333;
 }
 
@@ -117,9 +117,10 @@ body {
 .centered {
   position: relative;
   top: 50%;
+  left: 10%;
   text-align: center;
-  transform: translate(0, -50%);
-  width: 100%;
+  transform: translate(0%, -50%);
+  width: 80%;
 }
 
 .toptool {
@@ -194,7 +195,7 @@ body {
 .calendarpadding {
   background-color: #fff;
   border-radius: 1rem;
-  padding: 0.3rem;
+  padding: 0.3rem 0.3rem 0.6rem 0.3rem;
   margin: 1rem 1rem 0rem 1rem;
   box-shadow: 0.02rem 0.02rem 0.8rem 0.08rem #8d9aa8;
   z-index: 1;
@@ -305,48 +306,47 @@ label {
   cursor: pointer;
   color: #2b2b2b;
   font-size: 1rem;
-  padding: 0.6rem;
-  height: 7vh;
+  padding: 0.7% 0;
   text-align: center;
-  border-radius: 0.4rem;
-  -webkit-transition: all 250ms;
+  -webkit-transition: all 50ms;
   -o-transition: all 250ms;
   transition: all 250ms;
   position: relative;
+  border-radius: 50%;
+  height: 6vh;
+  width: 6vh;
+  margin-block: 0.3vh;
+  margin-inline: 2.12rem;
+  display: inline-table;
+  vertical-align: middle;
 }
 
 .table-date:not(.nil):hover {
-  border-color: #f4c253;
+  border-color: #FFF0D0;
 }
 
 .event-date-green {
-  background: #81b725;
-  color: #fff;
+  background: #D9E9BD;
 }
 
 .event-date-yellow {
-  background: #f4c253;
-  color: #fff;
+  background: #FFF0D0;
 }
 
 .event-date-red {
-  background: #e2410a;
-  color: #fff;
+  background: #F6C6B6;
 }
 
 .event-date-green.active-date {
-  background: #6ba100;
-  color: #fff;
+  background: #c3dc97;
 }
 
 .event-date-yellow.active-date {
-  background: #e6b546;
-  color: #fff;
+  background: #ffe09d;
 }
 
 .event-date-red.active-date {
-  background: #c42300;
-  color: #fff;
+  background: #f0a389;
 }
 
 h3 {
